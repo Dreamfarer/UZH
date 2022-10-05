@@ -9,18 +9,19 @@ shift_by = 1
 
 # perform a ROTn encoding
 def rot_n():
+
     # You need to change the functionality of this function to
     # create the correct 'encoded' string which will be returned
     # at the end of the function.
 
-    global shift_by # Explicitly make the scope global, somehow it did not work otherwise
+    global shift_by # Change the scope of the function to be global (a couple of students struggled with errors because of variable scope issues)
 
-    encoded = "" # String holding the encoded characters
+    encoded = "" # This variable will hold the ROT-encoded string
 
-    # Loop over plain text
+    # Loop over every character in the plain text string
     for character in plain_text:
 
-        # Only rotate A-Z and a-z
+        # Only rotate A-Z and a-z (the description stated we should copy every other character unchanged into the encoded string)
         if character.isalpha():
             
             # Get Ascii code of character
@@ -29,7 +30,7 @@ def rot_n():
             # Prodedure for lower-case letters
             if character.islower():
 
-                # Make sure index stays in between a to z: 97 to 122
+                # Make sure index stays in between a to z: 97 to 122 (most students have used modulo here. I am quite unfamiliar with it, so I didn't use it)
                 while not ascii_index + shift_by in range(97, 123):
 
                     if shift_by <= 0:
@@ -40,7 +41,7 @@ def rot_n():
             # Prodedure for upper-case letters
             else:
 
-                # Make sure index stays in between A to Z: 65 to 90
+                # Make sure index stays in between A to Z: 65 to 90 (most students have used modulo here. I am quite unfamiliar with it, so I didn't use it)
                 while not ascii_index + shift_by in range(65, 91):
 
                     if shift_by <= 0:
@@ -48,7 +49,7 @@ def rot_n():
                     else:
                         shift_by -= len(range(65, 91))
 
-            # Add character to output string
+            # Add the new character to encoded output string
             encoded += chr(ascii_index + shift_by)   
 
         else:

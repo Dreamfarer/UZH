@@ -12,3 +12,4 @@ print("Hello, World!")
 # function receives exactly one argument, which is a so-called
 # "String". Strings are pieces of text and in Python, they are
 # surrounded by quotation marks ("")
+

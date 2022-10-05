@@ -5,7 +5,7 @@ age = 37
 
 # generate the greeting sentence
 def generate_greeting():
-    # You need to change the following line
+    # You need to change the following line with fString formatting
     greeting = f"Hello {name}, you are {age} years old!"
 
     # You don't need to change the following line.

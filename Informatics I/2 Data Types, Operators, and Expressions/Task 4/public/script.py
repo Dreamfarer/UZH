@@ -11,11 +11,10 @@ def transform_string():
     # it). Then, you can construct the final result
     # from your temporary variables.
 
-    # Simpler solution by Remo
+    # 1 Extract everything until ":" and convert it to lower case letters
+    # 2 Extract everything after ":" and convert it to upper case letters
+    # 3 Combine the two expressions and add them together
     res = s[:s.find(":")].lower() + s[s.find(":"):].upper()
-
-    # Initial solution
-    # res = s.split(":")[0].lower() + ":" + s.split(":")[1].upper()
 
     # You don't need to change the following line.
     # It simply returns the string created above.
