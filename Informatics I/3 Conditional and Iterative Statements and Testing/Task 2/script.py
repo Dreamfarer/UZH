@@ -24,20 +24,24 @@ def is_valid():
                 appeareance_counter[0] += 1
 
             # Upper case
-            if character.isupper():
+            elif character.isupper():
                 appeareance_counter[1] += 1
 
             # Digits
-            if character.isdigit():
+            elif character.isdigit():
                 appeareance_counter[2] += 1
 
             # Special characters
-            if character in ["+", "-", "*", "/"]:
+            elif character in ["+", "-", "*", "/"]:
                 appeareance_counter[3] += 1
 
-            # Check whether it only contains the characters a-z, A-Z, digits, or the special chars "+", "-", "*", "/".
-            if not (character in ["+", "-", "*", "/"] or character.islower() or character.isupper() or character.isdigit()):
+            # Not valid password if character is nothing from above
+            else:
                 return False
+
+            # Check whether it only contains the characters a-z, A-Z, digits, or the special chars "+", "-", "*", "/".
+            #if not (character in ["+", "-", "*", "/"] or character.islower() or character.isupper() or character.isdigit()):
+            #    return False
 
         # Check that there are at least 2 lower case and 2 upper case characters, 2 digits, and 2 special chars
         for number in appeareance_counter:
