@@ -15,10 +15,10 @@ def get_bmi_category():
     # The BMI formula is given by BMI = weight / height^2 where weight is in kilograms and height is in meters.
 
     # For unreasonable inputs (a.k.a heights/weights below 0) simply return "N/A" -.-
-    if height < 0 or weight < 0:
+    if height <= 0 or weight < 0: 
         return "N/A"
 
-    bmi = weight / pow(height, 2) # Calulcate the BMI index
+    bmi = weight / pow(height, 2) # Calulcate the BMI index (attention division by zero avoided with above statement "height <= 0", thanks Jan)
     bmi_category = "" # This string will hold the bmi category
 
     # Assign a category according to the bmi index

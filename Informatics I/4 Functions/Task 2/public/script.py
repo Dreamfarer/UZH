@@ -3,9 +3,27 @@
 # This signature is required for the automated grading to work.
 # Do not rename the function or change its list of parameters!
 
-
 def req_steps(num_disks):
-    #      Example case: 4 disks
+    
+    ################################################################
+    # Comment by Gianluca
+    ################################################################
+    # Wikipedia says: 
+    # With 3 disks, the puzzle can be solved in 7 moves. 
+    # The minimal number of moves required to solve a Tower of Hanoi puzzle is 2^n − 1, where n is the number of disks.
+    
+    # So we do not actually need to implement the puzzle, we only need to calculate 2^n - 1 without Math.pow()
+    
+    # Hint: 2^n - 1 can be written as: 1 + 2 * (1 + 2 * (1 + 2 * (...))). Instead of subtracting at the end, we add 1 to every multiplication by 2.
+    # Example:
+    # 2^4 - 1 = 2 * 2 * 2 * 2 - 1
+    # 2^4 - 1 = 1 + 2 * (1 + 2 * (1 + 2 * (1)))
+    
+    ################################################################
+    # Comment & solution by Luca (@LeCarbonator)
+    ################################################################
+
+    # Example case: 4 disks
     # ┌──────────────────────────────────────────────┐
     # │ 1. Move disk 4 from ORIGINAL to GOAL         │ <- 1 + ...
     # │                                              │
@@ -35,11 +53,9 @@ def req_steps(num_disks):
     if num_disks == 1:
         return 1
     return 1 + req_steps(num_disks-1) * 2
-
-
+    
 # The following line calls the function and prints the return
 # value to the Console. This way you can check what it does.
 # However, we encourage you to write tests, because then you
 # can easily test many different values on every "Test & Run"!
-print("For moving {} disks, {} steps are required.".format(
-    4, req_steps(4)))
+print("For moving {} disks, {} steps are required.".format(3, req_steps(3)))
