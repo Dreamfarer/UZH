@@ -7,21 +7,23 @@
 def req_steps(num_disks):
     #      Example case: 4 disks
     # ┌──────────────────────────────────────────────┐
-    # │ 1. Move disk 4 from ORIGINAL to GOAL         │
-    # │ 2. Move disk 3 from ORIGINAL to EXTRA        │
-    # │ 3. Move disk 2 from ORIGINAL to GOAL         │
-    # │ 4. Move disk 1 from ORIGINAL to EXTRA   <-END│
-    # │ 5. Move disk 1 from EXTRA to GOAL       <-END│
-    # │ 6. Move disk 2 from GOAL to EXTRA            │
-    # │ 7. Move disk 1 from GOAL to ORIGINAL    <-END│
-    # │ 8. Move disk 1 from ORIGINAL to EXTRA   <-END│
-    # │ 9. Move disk 3 from EXTRA to GOAL            │
-    # │10. Move disk 2 from EXTRA to ORIGINAL        │
-    # │11. Move disk 1 from EXTRA to GOAL       <-END│
-    # │12. Move disk 1 from GOAL to ORIGINAL    <-END│
-    # │13. Move disk 2 from ORIGINAL to GOAL         │
-    # │14. Move disk 1 from ORIGINAL to EXTRA   <-END│
-    # │15. Move disk 1 from EXTRA to GOAL       <-END│
+    # │ 1. Move disk 4 from ORIGINAL to GOAL         │ <- 1 + ...
+    # │                                              │
+    # │ 2. Move disk 3 from ORIGINAL to EXTRA        │ <- a
+    # │ 3. Move disk 2 from ORIGINAL to GOAL         │ <- a-1
+    # │ 4. Move disk 1 from ORIGINAL to EXTRA   <-END│ <- a-1-1 done
+    # │ 5. Move disk 1 from EXTRA to GOAL       <-END│ <- a-1-2 done
+    # │ 6. Move disk 2 from GOAL to EXTRA            │ <- a-2
+    # │ 7. Move disk 1 from GOAL to ORIGINAL    <-END│ <- a-2-1 done
+    # │ 8. Move disk 1 from ORIGINAL to EXTRA   <-END│ <- a-2-2 done
+    # │                                              │
+    # │ 9. Move disk 3 from EXTRA to GOAL            │ <- b
+    # │10. Move disk 2 from EXTRA to ORIGINAL        │ <- b-1
+    # │11. Move disk 1 from EXTRA to GOAL       <-END│ <- b-1-1 done
+    # │12. Move disk 1 from GOAL to ORIGINAL    <-END│ <- b-1-2 done
+    # │13. Move disk 2 from ORIGINAL to GOAL         │ <- b-2
+    # │14. Move disk 1 from ORIGINAL to EXTRA   <-END│ <- b-2-1 done
+    # │15. Move disk 1 from EXTRA to GOAL       <-END│ <- b-2-2 done
     # │    For moving 4 disks, 15 steps are required.│
     # └──────────────────────────────────────────────┘
     #  It's 3 steps per recursion.
