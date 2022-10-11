@@ -9,13 +9,16 @@ INVALID_IP_STRING = "Some arbitrary string"
 
 ##############################################################################
 # !ATTENTION!
-# This solution only gives 2 out of 3 points. Reason is the following:
+# This solution only gives 2.75 out of 3 points. Reason is the following:
 # "Invalid IPv6 address falsely identified as valid"
 # DO NOT SUBMIT IT
 ##############################################################################
 
 def is_valid_IPv4_octet(octet: str):
     """Returns True if octet represents a valid IPv4 octet, False otherwise"""
+
+    # Return false if provided octet has a minus
+    if not octet.find("-") == -1: return False
 
     string_octet = octet # Store a copy to compare it later on
 
@@ -29,8 +32,8 @@ def is_valid_IPv4_octet(octet: str):
     # Prevent cases like "000" = "0", because "127.000.0.1" is illegal
     if not str(octet) == string_octet: return False
 
-    # Check that the octet is not bigger than 255
-    if octet > 255: return False 
+    # Check that the octet is not bigger than 255 and not minus
+    if octet > 255 or octet < 0: return False 
     else: return True
 
 def is_valid_IPv4(ip: str):
@@ -48,6 +51,9 @@ def is_valid_IPv4(ip: str):
 def is_valid_IPv6_hextet(hextet: str):
     """Returns True if hextet represents a valid IPv6 hextet, False otherwise"""
 
+    # Return false if provided octet has a minus
+    if not hextet.find("-") == -1: return False
+
     # Check that there are less or equal than 4 characters
     if len(hextet) > 4: return False
     
@@ -55,8 +61,8 @@ def is_valid_IPv6_hextet(hextet: str):
     try: hextet = int(hextet, 16)
     except: return False
 
-    # Check that hextet is not bigger than 65535
-    if hextet > 65535: return False 
+    # Check that hextet is not bigger than 65535 and not minus
+    if hextet > 65535 or hextet < 0: return False 
     else: return True
 
 def is_valid_IPv6(ip: str):
