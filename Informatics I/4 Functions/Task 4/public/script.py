@@ -7,84 +7,55 @@ IPv6_STRING = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 IPv6_INVALID_STRING = "2001:0db8:85a3:0000:0000:8a2e:0370:7334:7334"
 INVALID_IP_STRING = "Some arbitrary string"
 
-##############################################################################
-# !ATTENTION!
-# This solution only gives 2.75 out of 3 points. Reason is the following:
-# "Invalid IPv6 address falsely identified as valid"
-# DO NOT SUBMIT IT
-##############################################################################
 
 def is_valid_IPv4_octet(octet: str):
     """Returns True if octet represents a valid IPv4 octet, False otherwise"""
+    parsed_octet = int(octet)
+    return parsed_octet >= 0 and parsed_octet <= 255
 
-    # Return false if provided octet has a minus
-    if not octet.find("-") == -1: return False
-
-    string_octet = octet # Store a copy to compare it later on
-
-    # Check that there are less or equal than 3 characters
-    if len(octet) > 3: return False 
-    
-    # Try to convert the provided octet into an integer, if it fails, it is not a valid octet
-    try: octet = int(octet)
-    except: return False
-
-    # Prevent cases like "000" = "0", because "127.000.0.1" is illegal
-    if not str(octet) == string_octet: return False
-
-    # Check that the octet is not bigger than 255 and not minus
-    if octet > 255 or octet < 0: return False 
-    else: return True
 
 def is_valid_IPv4(ip: str):
     """Returns True if ip represents a valid IPv4 address, False otherwise"""
-    
-    # Check if the structure is correct for IPv4
-    if ip.count(".") == 3:
-        octets = ip.split(".") # Split the string into substrings
+    fields = ip.split(".")
+    # IPv4 may only contain four fields
+    if len(fields) > 4:
+        return False
+    # if any segment is invalid, loop breaks early and returns false.
+    for num in fields:
+        if not is_valid_IPv4_octet(num):
+            return False
+    return True
 
-        # Loop over every octet and validate it
-        for octet in octets:
-            if not is_valid_IPv4_octet(octet): return False
-        return True
-            
+
 def is_valid_IPv6_hextet(hextet: str):
     """Returns True if hextet represents a valid IPv6 hextet, False otherwise"""
+    parsed_hex = int(hextet, 16)
+    return parsed_hex >= 0 and parsed_hex <= 65535
 
-    # Return false if provided octet has a minus
-    if not hextet.find("-") == -1: return False
-
-    # Check that there are less or equal than 4 characters
-    if len(hextet) > 4: return False
-    
-    # Try to convert the provided hextet into an integer, if it fails, it is not a valid hextet
-    try: hextet = int(hextet, 16)
-    except: return False
-
-    # Check that hextet is not bigger than 65535 and not minus
-    if hextet > 65535 or hextet < 0: return False 
-    else: return True
 
 def is_valid_IPv6(ip: str):
     """Returns True if ip represents a valid IPv6 address, False otherwise"""
-    
-    # Check if the structure is correct for IPv6
-    if ip.count(":") == 7:
-        hextets = ip.split(":") # Split the string into substrings
+    fields = ip.split(":")
+    # IPv6 may only contain 8 fields
+    if len(fields) > 8:
+        return False
+    # if any segment is invalid, loop breaks early and returns false.
+    for num in fields:
+        if not is_valid_IPv6_hextet(num):
+            return False
+    return True
 
-        # Loop over every hextet and validate it
-        for hextet in hextets:
-            if not is_valid_IPv6_hextet(hextet): return False
-        return True
 
 def is_valid_IP(ip: str):
     """Returns True if ip represents a valid IPv4 or IPv6 address False otherwise"""
+    # check if dots or colons are within the string
+    if "." in ip:
+        return is_valid_IPv4(ip)
+    elif ":" in ip:
+        return is_valid_IPv6(ip)
+    # If neither ipv6 or ipv4 applies
+    return False
 
-    # Call functions which check whether the provided ip adress is a valid IPv4 or IPv6 adress
-    if is_valid_IPv4(ip) or is_valid_IPv6(ip):
-        return True
-    else:
-        return False
 
 # The following lines call is_valid_IP and print the result.
 # This way you can check what it does.
