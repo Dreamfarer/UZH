@@ -27,6 +27,11 @@
 
 #!/usr/bin/env python3
 
+########################################################
+# TASK IS EXPERIENCING ModuleNotFound ERRORS.
+# THIS FILE IS UNTESTED AND NOT GUARANTEED TO GRANT
+# FULL POINTS.
+#######################################################
 
 # Complete the following to implement the described hamming distance function.
 # This signature is required for the automated grading to work.
