@@ -11,17 +11,40 @@ def build_string_pyramid():
     # at the end of the function.
     s = ""
 
-    # Enter your code here
-    # use nested loops and the range() function
+    # Create a tuple holding the numbers 1 to 'h'
+    # I prefer this way over an index based approach because it starts at 1 instead of the common 0
+    heights = range(h+1)[1:]
 
-    # You don't need to change the following line.
-    # It simply returns the string created above.
-    return s
+    # Loop over 1, 2, 3, ..., n height steps 
+    for step in heights:
 
+        # Loop over all sub-steps leading up to the current step
+        steps = range(step+1)[1:]
+        for sub_step in steps:
+
+            if sub_step == 1: s += str(sub_step)
+            else: s += "*" + str(sub_step)
+        
+        # End line
+        s += "\n"
+
+    # Loop over n-1, n-2, ..., 2, 1 height steps (reverse). Pay attention to start of 'n-1', because we've already printed 'n' before
+    for step in reversed(heights[:len(heights)-1]):
+
+        # Loop over all sub-steps leading up to the current step
+        steps = range(step+1)[1:]
+        for sub_step in steps:
+
+            if sub_step == 1: s += str(sub_step)
+            else: s += "*" + str(sub_step)
+        
+        # End line
+        s += "\n"
+
+    # Return the string but cut away the last '\n'
+    return s[:len(s)-1]
+    
 # The following line calls the function and prints the return
 # value to the Console. This way you can check what it does.
 # See the console output and compare it to the image in the task description
 print(build_string_pyramid())
-
-
-
