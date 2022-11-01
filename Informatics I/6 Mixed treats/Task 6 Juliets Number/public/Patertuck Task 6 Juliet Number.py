@@ -21,11 +21,8 @@ def get_possible_nrs(n):
             generated_number = n[:index] + str(digit) + n[index:]
 
             # adds the number if its valid and if it doesn't already exit in the return list
-            if generated_number in wa_nrs:
-                print("Y")
-
-                if generated_number not in possible_nrs_for_juliet:
-                    possible_nrs_for_juliet.append(generated_number)
+            if generated_number in wa_nrs and generated_number not in possible_nrs_for_juliet:
+                possible_nrs_for_juliet.append(generated_number)
 
     return possible_nrs_for_juliet
 
