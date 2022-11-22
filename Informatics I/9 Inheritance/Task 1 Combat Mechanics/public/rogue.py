@@ -7,5 +7,5 @@
 
 from public.character import Character
 
-class Rogue:
+class Rogue(Character):
     pass

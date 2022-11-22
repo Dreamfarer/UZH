@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
-# This is the unit test suite that has been created for the
-# Character class. Investigate the different tests to learn
-# about testing strategies and use it as documentation.
+###############################################################################
+# DON'T BOTHER, NOT INCLUDED IN GRADING
+###############################################################################
 
 from unittest import TestCase
 from public.character import Character

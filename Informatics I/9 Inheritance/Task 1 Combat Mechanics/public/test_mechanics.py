@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+###############################################################################
+# DON'T BOTHER, NOT INCLUDED IN GRADING
+###############################################################################
 
 from unittest import TestCase
 from public.knight import Knight

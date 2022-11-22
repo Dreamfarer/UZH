@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
-
-# The purpose of this file is illustrating the class usages. This script
-# is irrelevant for the grading and you can freely change its contents.
+###############################################################################
+# DON'T BOTHER, NOT INCLUDED IN GRADING
+###############################################################################
 
 from public.knight import Knight
 from public.mage import Mage
