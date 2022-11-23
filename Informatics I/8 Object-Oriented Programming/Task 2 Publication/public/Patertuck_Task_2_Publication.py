@@ -4,12 +4,6 @@
 # You must not change the names or the list of parameters.
 # You may introduce private/protected utility methods though.
 
-# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-# Disclaimer: This solution gave 2.8 points out of 3.
-# It gave the hint: "a < b should be 'NotImplemented' when comparing to non-Publications."
-# I think I fixed it, so it should give 3 out of 3.
-# Use at own risk!!!
-# \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 class Publication:
 
     def __init__(self, authors, title, year):
