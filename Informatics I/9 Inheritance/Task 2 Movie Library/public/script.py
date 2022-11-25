@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
-
-# The purpose of this file is illustrating the class usages. This script
-# is irrelevant for the grading and you can freely change its contents.
+###############################################################################
+# IRRELEVANT TO GRADING
+###############################################################################
 
 from public.movie import Movie
 from public.moviebox import MovieBox

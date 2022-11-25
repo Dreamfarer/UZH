@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+###############################################################################
+# IRRELEVANT TO GRADING
+# Might be useful as it contains more tests from our professor
+###############################################################################
 
 from unittest import TestCase
 from public.movie import Movie
@@ -17,6 +20,49 @@ class LibraryTest(TestCase):
         expected = 'MovieBox("T", [Movie("T2", ["A", "B"], 234)])'
         self.assertEqual(expected, actual)
 
+    def test_repr_moviebox_2_movies(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Godfather", ["Brando", "Pacino"], 175)
+        c = Movie("12 Angry Men", ["Fonda", "Cobb"], 96)
+        d = MovieBox("Top Movies", [b, c])
+        actual = repr(d)
+        expected = 'MovieBox("Top Movies", [Movie("The Godfather", ["Brando", "Pacino"], 175), ' \
+                   'Movie("12 Angry Men", ["Fonda", "Cobb"], 96)])'
+        self.assertEqual(expected, actual)
+
+    def test_duration_moviebox(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Godfather", ["Brando", "Pacino"], 175)
+        c = Movie("12 Angry Men", ["Fonda", "Cobb"], 96)
+        d = MovieBox("Top Movies", [b, c])
+        e = MovieBox("Another MovieBox", [a, b, c])
+        self.assertEqual(271, d.get_duration())
+        self.assertEqual(413, e.get_duration())
+
+    def test_get_actors_movie(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Godfather", ["Brando", "Pacino"], 175)
+        self.assertEqual(["Robbins", "Freeman"], a.get_actors())
+        self.assertEqual(["Brando", "Pacino"], b.get_actors())
+
+    def test_get_actors_moviebox(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Godfather", ["Brando", "Pacino"], 175)
+        c = Movie("12 Angry Men", ["Fonda", "Cobb"], 96)
+        d = MovieBox("Top Movies", [b, c])
+        e = MovieBox("Another MovieBox", [a, b, c])
+        # remember: list must be sorted alphabetically!
+        self.assertEqual(['Brando', 'Cobb', 'Fonda', 'Pacino'], d.get_actors())
+        self.assertEqual(['Brando', 'Cobb', 'Fonda', 'Freeman', 'Pacino', 'Robbins'], e.get_actors())
+
+    def test_get_actors_moviebox_duplicates(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Godfather", ["Brando", "Pacino", "Robbins"], 175)
+        c = Movie("12 Angry Men", ["Fonda", "Cobb"], 96)
+        d = MovieBox("Top Movies", [a, b, c])
+        # remember: list must be sorted alphabetically!
+        self.assertEqual(['Brando', 'Cobb', 'Fonda', 'Freeman', 'Pacino', 'Robbins'], d.get_actors())
+
     def test_library(self):
         a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
         b = Movie("The Godfather", ["Brando", "Pacino"], 175)
@@ -27,9 +73,7 @@ class LibraryTest(TestCase):
         l.add_movie(d)
         self.assertEqual(413, l.get_total_duration())
 
-    # This current test suite only contains very basic test cases. By now,
-    # you have some experience in writing test cases. We strongly encourage
-    # you to implement further test cases. The additional tests can be run via
-    # 'Test&Run' in ACCESS. These tests won't affect the grading of your solution
-    # directly, but they can help you with identifying relevant corner cases
-    # that you have to consider in your implementation.
+    def test_equal_movies(self):
+        a = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        b = Movie("The Shawshank Redemption", ["Robbins", "Freeman"], 142)
+        self.assertEqual(a == b, True)
