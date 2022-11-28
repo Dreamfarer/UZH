@@ -6,10 +6,14 @@
 
 from abc import ABC, abstractmethod
 
-class Car:
+# Set the following class to be abstract, meaning only subclasses can be instantiated
+# Nothing is actually happening, is is only used to create the structure
+class Car(ABC):
 
+    @abstractmethod # Set the following function to be abstract (subclasses must implement this method)
     def get_remaining_range(self):
         pass
 
+    @abstractmethod # Set the following function to be abstract (subclasses must implement this method)
     def drive(self, dist):
         pass

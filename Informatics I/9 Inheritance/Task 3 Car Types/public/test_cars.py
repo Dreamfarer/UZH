@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+###############################################################################
+# IRRELEVANT TO GRADING
+###############################################################################
 
 from unittest import TestCase
 from public.combustion_car import CombustionCar
