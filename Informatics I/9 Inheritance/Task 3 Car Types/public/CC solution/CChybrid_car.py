@@ -35,7 +35,7 @@ class HybridCar(CombustionCar, ElectricCar):
                     self.switch_to_electric()
                     ElectricCar.drive(self, dist-current_remaining)
                 else:
-                    self.switch_to_electric()
+                    self.switch_to_combustion()
                     CombustionCar.drive(self, dist-current_remaining)
             except Warning:
                 raise Warning("fully depleted")
