@@ -12,7 +12,7 @@ If you only want to do a one time contribution, consider helping via the forking
 Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION** E.g. **009-1-Perytron-Fix**. Tap the green button labeled "**Create branch**" to confirm.
 
 #### Step 2: Switch to your newly created branch
-Copy the following statements by tapping the copy button on the right hand side of the code box and paste them into your git-enabled terminal of choice. Be sure to change **BRANCH_NAME** to your name defined in step 1, for example **git checkout 009-1-Perytron-Fix**. You can safely past the whole code block into the terminal, it will only execute the first two statements automatically.
+Copy the following statements by tapping the copy button on the right hand side of the code box and paste them into your git-enabled terminal of choice. Be sure to change **BRANCH_NAME** to your name defined in step 1, for example **git checkout 009-1-Perytron-Fix**. You can safely paste the whole code block into the terminal, it will only execute the first two statements automatically.
 ```
 git checkout main
 git fetch --all
