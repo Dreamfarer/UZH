@@ -1,25 +1,27 @@
 from abc import ABC, abstractmethod
 
+class GeometricObject(ABC):
+    
+    def __init__(self, color: str, filled: bool):
+        self.__color = color
+        self.__filled = filled
 
-class GeometricObject:
+    def get_color(self) -> str:
+        return self.__color
 
-    def __init__(self, color, filled):
+    def set_color(self, color: str) -> None:
+        self.__color = color
+
+    def get_filled(self) -> bool:
+        return self.__filled
+
+    def set_filled(self, filled: bool) -> None:
+        self.__filled = filled
+
+    @abstractmethod
+    def get_area(self) -> float:
         pass
-
-    def get_color(self):
-        pass
-
-    def set_color(self, color):
-        pass
-
-    def get_filled(self):
-        pass
-
-    def set_filled(self, filled):
-        pass
-
-    def get_area(self):
-        pass
-
-    def get_volume(self):
+    
+    @abstractmethod
+    def get_volume(self) -> float:
         pass
