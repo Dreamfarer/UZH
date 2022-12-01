@@ -118,6 +118,7 @@ In order to upload your changes you have to do the following steps:
 ```
 1. On the left of your screen select "Commit"
 2. If you see your solution files under the "Unversioned Files" tab, you have to right click on them and select "Add to VCS" (Version Control System)
+ !!! Be sure to only add the actual solution files, not for example .gitignore or xml files. !!!
 3. If your files are under the "Changes" tab, checkbox them.
 4. Beneight write a logical commit message like, "Add 10.2 solution"
 5. Click "Commit and Push" and "Push" again in the popup.
