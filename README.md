@@ -14,18 +14,38 @@ There is nothing worse than being forced into a certain coding style. Having onl
 
 ### Step 0: Get collaborator rights
 
-If you are new here and want to contribute to this amazing project, you have certainly found the right place. This section of the manual focuses on contributing as a collaborator. It requires special rights that firstly need to be granted. Please create an issue over [here](https://github.com/Perytron/UZH/issues) and ask to be a collaborator! :)
+If this is your first time around, please stick around for the following explanation. However, if you already are a collaborator GitHub-wise, jump right to the next step. We rely on branch-based contributions; in order for you to follow this guide along and be able to create branches yourselves, you absolutely need to get the collaborator role. Don't be hesitant, create a simple issue over [here](https://github.com/Perytron/UZH/issues) and ask to receive your special rights! :)
+
 > If you only want to do a one time contribution, consider helping via the forking method explained further down.
 
 ### Step 1: Create a new branch
 Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION** E.g. **009-1-Perytron-Fix**. Tap the green button labeled "**Create branch**" to confirm.
 
 ### Step 2: Clone the repository
-Open your git-enabled terminal of choice in your directory of choice on your local machine. Execute the following command:
+<details><summary>Git-SCM</summary>
+
+Open your git-enabled terminal of choice in whatever local directory you want the repository to be stored. Execute the following command:
 ```
 git clone https://github.com/Perytron/UZH.git
 ```
 
+</details>
+
+<details><summary>Visual Studio Code</summary>
+
+Open up Visual Studio Code and either hit **Ctrl+Shift+G** or navigate to the left-most toolbar and click onto the icon that looks like a branch _(third icon underneath the Visual Studio Code logo)_. Click onto the button labeled "**Clone Repository**". Copy the following line and paste it into the search bar that has just popped up in Visual Studio Code.
+```
+https://github.com/Perytron/UZH.git
+```
+Chose whatever local directory you want the repository to be stored. Visual Studio Code will ask you whether you want to open the repository, confirm by clicking onto "**Open**".
+
+</details>
+
+<details><summary>PyCharm</summary>
+
+WIP
+
+</details>
 
 ### Step 3: Switch to your newly created branch
 <details><summary>Git-SCM</summary>
@@ -41,7 +61,9 @@ git checkout BRANCH_NAME
 </details>
 <details><summary>Visual Studio Code</summary>
 
-WIP
+The following step is very important because if you do not perform it, you would commit your local changes to the **main** branch directly. Like you have done in step two, navigate to the **Source Control** tab again within Visual Studio Code.
+
+Firstly, inside the **Source Control** tab, click onto the menu labeled "**...**" and choose "**Fetch**" to let Visual Studio Code discover your freshly created branch. Next off, again opening the menu labeled "**...**", choose "**Checkout to...**". The search bar will pop up; click onto the branch you have created in step one. It will appear in the form of "**origin/BRANCH_NAME**", in our example this would be: "**origin/009-1-Perytron-Fix**".
 
 </details>
 <details><summary>PyCharm</summary>
@@ -80,7 +102,9 @@ git push origin BRANCH_NAME
 </details>
 <details><summary>Visual Studio Code</summary>
 
-WIP
+Open the **Source Control** panel again like you have previously done in step two and three. However, this time, you will not be using the menu labeled "**...**". Instead, above the button labeled "**Commit**", enter a short but meaningful summary; tell us what you have changed. Be sure to follow the convention of starting the sentence with a capital letter. If you need over 50 characters, Visual Studio Code tells you that the message will be cut off on GitHub: Consider shortening it or adding a line break, which will appear as an additional description on GitHub.
+
+If you are satisfied with your commit message, tap onto the downwards pointing arrow on the right-hand side of the button labeled "**Commit**". Chose "**Commit & Push**" to upload your changes to GitHub.
 
 </details>
 <details><summary>PyCharm</summary>
@@ -105,7 +129,9 @@ If the push was successful you should see your commit on GitHub but remember loo
 </details>
 
 ### Step 6: Create a pull request (PR)
-Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the button labeled "**compare: main**". From the list, chose the branch you have just changed. Inside the pull request, add [Perytron (Gianluca)](https://github.com/Perytron) as a reviewer and yourself as an assignee. (Please tag your PR as well with the appropriate labels.) Your changes are now awaiting supervision, however, the code itself will not be tested. The only check involves oversighting that nothing gets unintentionally changed or deleted.
+Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the button labeled "**compare: main**". From the list, chose the branch you have just changed. Inside the pull request, add [Perytron (Gianluca)](https://github.com/Perytron) as a reviewer and yourself as an assignee. Please also tag your pull request (PR) with the appropriate labels. For example, if you were to upload solutions, chose the yellowish label called "**solution**". 
+
+Your changes are now awaiting supervision, however, the code itself will not be tested. The only check involves oversighting that nothing gets unintentionally changed or deleted.
 
 
 ### Alternative: Contribution via fork
