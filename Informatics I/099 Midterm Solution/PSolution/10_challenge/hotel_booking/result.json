@@ -1,0 +1,17 @@
+{
+    "user": "thuang",
+    "title": "Riddle me this!",
+    "passed": 7,
+    "failed": 0,
+    "points_attainable": 21,
+    "messages": [
+        "Correct result for a booking with zero products ... ok",
+        "Correct discount for two suites and one breakfast ... ok",
+        "Correct discount for two executive and one parking ... ok",
+        "\"Correct result for a booking with one standard room ... ok",
+        "Correct discount for a booking with 3 rooms ... ok",
+        "Final price after discount subtraction is correct ... ok",
+        "Discount is 0 for one standard and one executive ... ok"
+    ],
+    "points_achieved": 21
+}

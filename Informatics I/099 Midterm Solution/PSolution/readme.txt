@@ -1,0 +1,1 @@
+All solution were rewarded with full points.

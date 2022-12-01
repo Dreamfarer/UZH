@@ -1,0 +1,15 @@
+{
+    "user": "thuang",
+    "title": "Loops",
+    "passed": 5,
+    "failed": 0,
+    "points_attainable": 5,
+    "messages": [
+        "Call with xs containing 1 and ys containing two elements prints 2 lines ... ok",
+        "Call with empty xs doesn't print anything ... ok",
+        "Output correct for non-empty xs and ys. ... ok",
+        "Function returns None (and doesn't just pass) ... ok",
+        "Implementation uses a for loop ... ok"
+    ],
+    "points_achieved": 5
+}

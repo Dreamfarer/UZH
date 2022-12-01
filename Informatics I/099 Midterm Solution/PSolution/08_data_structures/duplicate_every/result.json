@@ -1,0 +1,17 @@
+{
+    "user": "thuang",
+    "title": "Data structures",
+    "passed": 7,
+    "failed": 0,
+    "points_attainable": 7,
+    "messages": [
+        "Correct result for empty l ... ok",
+        "Correct result if list values are of mixed types ... ok",
+        "Correct result for n = 1 ... ok",
+        "Correct result for n = 10 ... ok",
+        "Correct result for n = 2 ... ok",
+        "Correct result if n > len(l) ... ok",
+        "Correct result if list values are strings ... ok"
+    ],
+    "points_achieved": 7
+}
