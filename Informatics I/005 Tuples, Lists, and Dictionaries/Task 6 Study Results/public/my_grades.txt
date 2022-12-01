@@ -1,6 +1,0 @@
-            # first semesters
-Informatik 1:5.75
-Informatik 2:    5.5
-
-# later
-Advanced Software Engineering : 6.00
