@@ -43,7 +43,14 @@ Chose whatever local directory you want the repository to be stored. Visual Stud
 
 <details><summary>PyCharm</summary>
 
-WIP
+After launching PyCharm perform the following steps:
+```
+1. Tap on “Get from VCS” in the top right corner.
+2. Paste the following URL into the input field: “https://github.com/Perytron/UZH.git”
+3. Select the target destination you want the project folder to be in.
+4. Make sure the chosen Version Control System is “Git”.
+```
+> Alternatively you can also log into GitHub, then your able to select the project on the left side of the window.
 
 </details>
 
