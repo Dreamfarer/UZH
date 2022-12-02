@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
-from public.exchange_rates import EXCHANGE_RATES
+from typing import Union
+from exchange_rates import EXCHANGE_RATES
 
-def convert(amount, from_currency, to_currency) -> float:
+def convert(amount: Union[int, float], from_currency: str, to_currency: str) -> float:
 
     # Check that correct type is provided
     if False in [isinstance(from_currency, str), isinstance(to_currency, str), (isinstance(amount, float) or isinstance(amount, int))]: raise Warning("You had one (...) job. Provide the right type you (...) (...)!")
@@ -20,10 +20,10 @@ def convert(amount, from_currency, to_currency) -> float:
     except: pass
     else: return amount * exchange_rate
 
-    # Return if both currencies are the same, no converitng required
+    # Return if both currencies are the same, no converting required
     if from_currency == to_currency: return amount
 
-    raise Warning("Exchange rates do not exist")
+    raise Warning("Exchange rates do not exist") # Raise warning if nothing of the above matched
 
 
     
