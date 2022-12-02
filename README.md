@@ -6,6 +6,10 @@ This repository is a collaboration between various computer science students cur
 
 > To date, this project only includes tasks from the lecture _Informatics I_ which are being distributed over the ACCESS platform. In the future, it is planned to incorporate a handful of assignments, guides and information for other lectures.
 
+!!! DISCLAIMER !!!
+
+This repository is meant as a guideline and helping hand if you get stuck on a task. It is not the idea that you just copy + paste the answers, but use the solution as insipration on what's missing in your own code. This also counts for the provided tests. It can be boring to form them yourself, but it helps you understand the task better and obviously you don't have tests provided when working on real coding problems.
+
 
 ## Contributing
 There is nothing worse than being forced into a certain coding style. Having only one solution provided promotes exactly that. Read through the following guide and share your solution today to contribute to a diverse range of styles and approaches. This is the only way we can make sure other students find a satisfactory answer to their questions.
