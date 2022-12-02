@@ -26,6 +26,9 @@ If this is your first time around, please stick around for the following explana
 Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION** E.g. **009-1-Perytron-Fix**. Tap the green button labeled "**Create branch**" to confirm.
 
 ### Step 2: Clone the repository
+
+> This step only needs to be done once. For future contributions you can just fetch the repository first (as described in [Step 3](https://github.com/Perytron/UZH/edit/28-update-readme/README.md#step-3-switch-to-your-newly-created-branch). This will update your local copy of the UZH Repository to the current state of the one on Github.
+
 <details><summary>Git-SCM</summary>
 
 Open your git-enabled terminal of choice in whatever local directory you want the repository to be stored. Execute the following command:
