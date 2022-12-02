@@ -147,6 +147,8 @@ Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the b
 
 Your changes are now awaiting supervision, however, the code itself will not be tested. The only check involves oversighting that nothing gets unintentionally changed or deleted.
 
+> After the PR has been accepted, the branch you created get's closed, as your changes have been added to the main branch. This is to keep the respoitory clean of unused branches. If you want to contribute to a different exercise, just repeat the steps you already did and create a new branch. If you want to add something to your already closed branch (e.x. you forgot to add your test files), reopen the branch [here](https://github.com/Perytron/UZH/pulls?q=is%3Apr+is%3Aclosed) to keep the commit history organized. Update the branch to the current state of the main branch, add your files and push (probably hard push) to the branch, which you can PR into the main branch once more.
+
 
 ### Alternative: Contribution via fork
 > Don't worry if you have never contributed to a GitHub repository. Read through [this](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) official tutorial, which teaches you how to fork your own copy of this project and how to create a pull request. As a supplement to the guide, the download link for **git** can be found [here](https://git-scm.com/downloads). Additionally, read the [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) official GitHub instructions on how to sync your fork with its original repository.
