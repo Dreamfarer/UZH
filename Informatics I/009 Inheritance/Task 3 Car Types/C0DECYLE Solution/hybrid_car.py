@@ -22,7 +22,6 @@ class HybridCar(CombustionCar, ElectricCar):
         return CombustionCar.get_remaining_range(self) + ElectricCar.get_remaining_range(self)
 
     def drive(self, dist: float) -> None:
-        self._input_test((dist,), lambda: self.__zero())
         current_remaining: float = self.__get_mode_remaining_range()
         try:
             if self.__mode == self.__COMBUSTION:
@@ -30,23 +29,16 @@ class HybridCar(CombustionCar, ElectricCar):
             else:
                 ElectricCar.drive(self, dist)
         except Warning:
-            try:
-                if self.__mode == self.__COMBUSTION:
-                    self.switch_to_electric()
-                    ElectricCar.drive(self, dist-current_remaining)
-                else:
-                    self.switch_to_combustion()
-                    CombustionCar.drive(self, dist-current_remaining)
-            except Warning:
-                raise Warning("fully depleted")
+            if self.__mode == self.__COMBUSTION:
+                self.switch_to_electric()
+                ElectricCar.drive(self, dist-current_remaining)
+            else:
+                self.switch_to_combustion()
+                CombustionCar.drive(self, dist-current_remaining)
 
     def __get_mode_remaining_range(self) -> float:
         if self.__mode == self.__COMBUSTION:
             return CombustionCar.get_remaining_range(self)
         else:
             return ElectricCar.get_remaining_range(self)
-
-    def __zero(self) -> None:
-        CombustionCar._zero_gas(self)
-        ElectricCar._zero_battery(self)
 
