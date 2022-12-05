@@ -1,15 +1,15 @@
-## UZH Computer Science :computer:
+## 💾 UZH Computer Science
 
 ### About this project
 
-This repository is a collaboration between various computer science students :mortar_board: currently completing the assessment year at the [University of Zurich](https://www.oec.uzh.ch/en/studies/bachelor/it.html). Its main goal is to provide documented, functioning and divers sample solutions for fellow students seeking help in computer science.
+This repository is a collaboration between various computer science students currently completing the assessment year at the [University of Zurich](https://www.oec.uzh.ch/en/studies/bachelor/it.html). Its main goal is to provide documented, functioning and divers sample solutions for fellow students seeking help in computer science.
 
 > To date, this project only includes tasks from the lecture _Informatics I_ which are being distributed over the ACCESS platform. In the future, it is planned to incorporate a handful of assignments, guides and information for other lectures.
 
-> :warning: **Disclaimer** :warning:<br>This repository is meant as a guideline and helping hand if you get stuck on a task. It is not the idea that you just copy + paste the answers, but use the solution as insipration on what's missing in your own code. This also counts for the provided tests. It can be boring to form them yourself, but it helps you understand the task better and obviously you don't have tests provided when working on real coding problems.
+> :warning: **Disclaimer** :warning:<br>This repository is meant as a guideline and helping hand if you get stuck on a task. It is not the idea that you just copy and paste the answers blindly. Use the solution as inspiration on what's missing in your own code. This also counts for the provided tests: It can be boring to form them yourself, but it helps you understand the task better, and obviously, you don't have tests provided when working on real coding problems.
 
 
-## Contributing
+## 📝 Contributing
 There is nothing worse than being forced into a certain coding style. Having only one solution provided promotes exactly that. Read through the following guide and share your solution today to contribute to a diverse range of styles and approaches. This is the only way we can make sure other students find a satisfactory answer to their questions.
 
 > To make contributing as much painless and fun as possible, we have created the following manual supporting contributions via **Git-SCM** (command-line), **Visual Studio Code** and **PyCharm**. Chose what suits you best! You'll encounter a drop-down menu whenever some action is specific to one particular method. However, the main parts, like creating a new branch or submitting a pull request (PR) do not differ whatsoever.
@@ -25,13 +25,14 @@ Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green 
 
 ### Step 2: Clone the repository
 
-> This step only needs to be done once. For future contributions you can just fetch the repository first (as described in [Step 3](https://github.com/Perytron/UZH/edit/28-update-readme/README.md#step-3-switch-to-your-newly-created-branch). This will update your local copy of the UZH Repository to the current state of the one on Github.
+> This step only needs to be performed once in the beginning. For future contributions you'll want to fetch the repository first as described in [step 3](https://github.com/Perytron/UZH/edit/28-update-readme/README.md#step-3-switch-to-your-newly-created-branch) before proceeding. This will update your local copy of this repository to the current version found here on Github.
 
 <details><summary>Git-SCM</summary>
 
 Open your git-enabled terminal of choice in whatever local directory you want the repository to be stored. Execute the following command:
 ```
 git clone https://github.com/Perytron/UZH.git
+git cd UZH
 ```
 
 </details>
@@ -63,10 +64,11 @@ After launching PyCharm perform the following steps:
 <details><summary>Git-SCM</summary>
 
 Copy the following statements by tapping the copy button on the right-hand side of the code box and paste them into your git-enabled terminal of choice. Be sure to change **BRANCH_NAME** to your name defined in step 1, for example **git checkout 009-1-Perytron-Fix**. You can safely paste the whole code block into the terminal, it will only execute the first two statements automatically.
-> Please make sure to execute the commands inside the locally cloned repository folder
+> Please make sure to execute the commands inside the locally cloned repository folder. If you have followed the previous steps of this manual, you are good to go.
 ```
 git checkout main
 git fetch --all
+git fetch --prune
 git checkout BRANCH_NAME
 ```
 
@@ -94,15 +96,15 @@ Inside your PyCharm you have to perform the following actions:
 </details>
 
 ### Step 4: Do your magic, be creative
-Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not possible, please clearly label them as such. If the solution is more than one file, be sure to add them all within a folder that is named appropriately.
+Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not the case, please clearly label them as such. If the solution contains more than one file, be sure to add them all within a folder following the convention of **USERNAME Solution**, e.g. **Perytron Solution**.
 
-> As for test cases: There is one file where every contributor can add their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file, ending your test names with your username or abbrevation, e.g. ** def test_invalid_input_PER **. 
+> As for test cases: There is one file where every contributor adds their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file. Please append your test function names with your username or abbreviation, e.g. def test_invalid_input_PER.
 
 ### Step 5: Just send it (Commit & Push)
-> When writing a message, be sure to write it in present tense, as this is the standard.
+> When writing your commit message, be sure to follow the convention of starting the sentence with a capital letter and writing in present tense, e.g. "**Add solution 010-4**".
 <details><summary>Git-SCM</summary>
 
-To track, stage and commit your changes, you will have to copy and paste the following commands into your git-enabled terminal of choice. Please change **COMMIT_MESSAGE** and **ADDITIONAL_DESCRIPTION** to something meaningful, e.g. **git commit -m "E10 T1 fix" -m "Fix typo in main function"**. Be sure to follow the convention of starting the sentence with a capital letter. Don't forget to include the quotation marks (").
+To track, stage and commit your changes, you will have to copy and paste the following commands into your git-enabled terminal of choice. Please change **COMMIT_MESSAGE** and **ADDITIONAL_DESCRIPTION** to something meaningful, e.g. **git commit -m "E10 T1 fix" -m "Fix typo in main function"**. Don't forget to include the quotation marks (").
 ```
 git add .
 git commit -m "COMMIT_MESSAGE" -m "ADDITIONAL_DESCRIPTION"
@@ -115,7 +117,7 @@ git push origin BRANCH_NAME
 </details>
 <details><summary>Visual Studio Code</summary>
 
-Open the **Source Control** panel again like you have previously done in step two and three. However, this time, you will not be using the menu labeled "**...**". Instead, above the button labeled "**Commit**", enter a short but meaningful summary; tell us what you have changed. Be sure to follow the convention of starting the sentence with a capital letter. If you need over 50 characters, Visual Studio Code tells you that the message will be cut off on GitHub: Consider shortening it or adding a line break, which will appear as an additional description on GitHub.
+Open the **Source Control** panel again like you have previously done in step two and three. However, this time, you will not be using the menu labeled "**...**". Instead, above the button labeled "**Commit**", enter a short but meaningful summary; tell us what you have changed. If you need over 50 characters, Visual Studio Code tells you that the message will be cut off on GitHub: Consider shortening it or adding a line break, which will appear as an additional description on GitHub.
 
 If you are satisfied with your commit message, tap onto the downwards pointing arrow on the right-hand side of the button labeled "**Commit**". Chose "**Commit & Push**" to upload your changes to GitHub.
 
@@ -148,12 +150,25 @@ Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the b
 
 Your changes are now awaiting supervision, however, the code itself will not be tested. The only check involves oversighting that nothing gets unintentionally changed or deleted.
 
-> After the PR has been accepted, the branch you created get's closed, as your changes have been added to the main branch. This is to keep the respoitory clean of unused branches. If you want to contribute to a different exercise, just repeat the steps you already did and create a new branch. If you want to add something to your already closed branch (e.x. you forgot to add your test files), reopen the branch [here](https://github.com/Perytron/UZH/pulls?q=is%3Apr+is%3Aclosed) to keep the commit history organized. Update the branch to the current state of the main branch, add your files and push (probably hard push) to the branch, which you can PR into the main branch once more.
-
+> After the pull request (PR) has been accepted, the branch you have created previously in step one gets closed, as your changes have now been added to the main branch. This is done automatically to keep the repository clean of unused branches. If you want to add something to your already closed branch (e.g. you forgot to add your test files), reopen the branch [here](https://github.com/Perytron/UZH/pulls?q=is%3Apr+is%3Aclosed) by selecting your already closed pull request, scrolling to the bottom and clicking the button labeled "**Restore Branch**". Start at [step 3](https://github.com/Perytron/UZH/edit/28-update-readme/README.md#step-3-switch-to-your-newly-created-branch) of this manual. Please be aware that you need to update the branch first because it is now behind the main branch. Instead of using **git fetch**, use **git pull** when in your local branch to actually get the newest version with all its files (**git pull** is the equivalent of **git fetch & git merge**).
 
 ### Alternative: Contribution via fork
 > Don't worry if you have never contributed to a GitHub repository. Read through [this](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) official tutorial, which teaches you how to fork your own copy of this project and how to create a pull request. As a supplement to the guide, the download link for **git** can be found [here](https://git-scm.com/downloads). Additionally, read the [these](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) official GitHub instructions on how to sync your fork with its original repository.
 
+## ❓ Frequently Asked Questions
+<details><summary>Q: I've made changes to the wrong local branch, what should I do?</summary>
 
-## Help :hospital:
-If you encounter any issue or would like to contribute to a specific problem without going through the process of creating a pull request, create an [issue](https://github.com/Perytron/UZH/issues) and I will aid you as soon as possible. For the non-GitHub users among you, write us directly in the WhatsApp chat "Informatik Jahrgang 22"
+A: I would definitely be lying if I say this has never happened to me, quite the contrary, actually. But don't worry, everything is alright! For this method to work, however, you need to be able to access **git** via the command-line. Copy the following line and paste it into your git-enabled terminal of choice. It will copy your changes.
+```
+git stash
+```
+Before copying and pasting the following commands, change **BRANCH_NAME** to the name of the branch you want your changes to be applied to. **git** will now carry over any changes made to the wrong branch over to your branch of choice.
+```
+git switch BRANCH_NAME
+git stash apply
+```
+
+</details>
+
+## 🆘 Help
+If you encounter any issue or would like to contribute to a specific problem without going through the process of creating a pull request, create an [issue](https://github.com/Perytron/UZH/issues) and we will aid you as soon as possible. For the non-GitHub users among you, write us directly in the WhatsApp chat "Informatik Jahrgang 22".
