@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import string
+from string import ascii_lowercase
 from typing import List, Dict
 from public.data import words
 
@@ -14,7 +14,7 @@ def words_starting_with_character(c: str) -> List[str]:
     return [word for word in words if word[0] == c]
 
 def alphabet() -> str:
-    return string.ascii_lowercase
+    return ascii_lowercase
 
 def dictionary() -> Dict[str, List[str]]:
     return {key: words_starting_with_character(key) for key in alphabet()}
