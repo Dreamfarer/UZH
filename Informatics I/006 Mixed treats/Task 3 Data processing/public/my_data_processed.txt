@@ -1,5 +1,0 @@
-Firstname,Lastname
-Beat,Meier
-,
-Barbara,Suter
-Roland,Berger
