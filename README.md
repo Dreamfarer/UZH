@@ -21,7 +21,7 @@ If this is your first time around, please stick around for the following explana
 > If you only want to do a one time contribution, consider helping via the forking method explained further down.
 
 ### Step 1: Create a new branch
-Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION** E.g. **009-1-Perytron-Fix**. Tap the green button labeled "**Create branch**" to confirm.
+Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION**. However, please use lowercase letters only, except for your username, and separate every task explicitly, e.g. **009-01-02-03-04-Perytron-solution** if you were to upload solution one to four of the 9th exercise set. Afterwards, tap the green button labeled "**Create branch**" to confirm.
 
 ### Step 2: Clone the repository
 
@@ -96,7 +96,7 @@ Inside your PyCharm you have to perform the following actions:
 </details>
 
 ### Step 4: Do your magic, be creative
-Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not the case, please clearly label them as such. If the solution contains more than one file, be sure to add them all within a folder following the convention of **USERNAME Solution**, e.g. **Perytron Solution**.
+Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not the case, please clearly label them as such. Remember to move all the files you are willing to upload into a folder following the convention of **USERNAME Solution**, e.g. **Perytron Solution**, before committing. Note that if your username originally starts with a lower-case letter, be sure to capitalize the first letter, e.g. change **paul891112** to **Paul891112**.
 
 > As for test cases: There is one file where every contributor adds their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file. Please append your test function names with your username or abbreviation, e.g. def test_invalid_input_PER.
 
