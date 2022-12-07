@@ -96,7 +96,7 @@ Inside your PyCharm you have to perform the following actions:
 </details>
 
 ### Step 4: Do your magic, be creative
-Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not the case, please clearly label them as such. Remember to move all the files you are willing to upload into a folder following the convention of **USERNAME Solution**, e.g. **Perytron Solution**, before committing. Note that if your username originally starts with a lower-case letter, be sure to capitalize the first letter, e.g. change **paul891112** to **Paul891112**.
+Now it is the time to implement all your changes. Please make sure that your code works and yields the maximum amount of points possible. If this is not the case, please clearly label them as such. Remember to move all the files you are willing to upload into a folder following the convention of **USERNAME Solution**, e.g. **Perytron Solution**, before committing. Note that if your username originally starts with a lower-case letter, be sure to capitalize the first letter, e.g. change **perytron** to **Perytron**.
 
 > As for test cases: There is one file where every contributor adds their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file. Please append your test function names with your username or abbreviation, e.g. def test_invalid_input_PER.
 
