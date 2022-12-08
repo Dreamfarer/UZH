@@ -169,6 +169,37 @@ git stash apply
 ```
 
 </details>
+<details><summary>Q: How do I clean up my local repository?</summary>
+
+A: **git** does not automatically delete unused branches, both remote and local ones, which could lead to a great mess in the long run. It is important to clean up your repository periodically. First of all, we'll switch to the main branch and check which branches there are by copying and pasting the following lines into your git-enabled terminal of choice.
+```
+git switch main
+git branch -v -a
+```
+This command will yield us a result like this, where **white** and **green** entries signify that this branch exists locally. Furthermore, **green** tells you that you are currently on this very branch. **Red** entries mean that these branches exist or have existed at one point in time.
+```diff
+  28-update-readme                                   
++ * main                                             
+- remotes/origin/010-01-02-03-04-Perytron-solution   
+- remotes/origin/011-01-02-03-04-Perytron-solution   
+- remotes/origin/28-update-readme                    
+- remotes/origin/HEAD                                
+- remotes/origin/main                                
+```
+Therein lies the problem: **git** does not automatically delete the remote branches (the **red** ones), even if they might not exist on GitHub anymore. You'll want to use the following command to delete your local remote branches, that were already deleted on GitHub.
+```
+git fetch -p
+```
+However, prune (the above command) will not delete local branches (the **white** ones). If you wanted to delete the white **28-update-readme** branch, you would use the following command:
+```
+git branch -d 28-update-readme
+```
+
+Deleting remote branches is very easy too, head over [here](https://github.com/Perytron/UZH/branches) and delete your desired branch using the 🗑️- icon. Please make sure you have selected the correct branch, else you might accidentally delete a branch actively used by a colleague.
+
+If you find yourself in the situation where nothing works anymore, you've completely messed up, there is still hope: You can always store the changed files in whatever folder that does not belong to this repository and completely delete the local copy of the repository. Afterwards, clone it again using [step 2](https://github.com/Perytron/UZH#step-2-clone-the-repository) of this documentation and instead of implementing everything again from scratch in [step 4](https://github.com/Perytron/UZH#step-4-do-your-magic-be-creative), you'll just copy over the changed files which you have temporarily stored before. 
+
+</details>
 
 ## 🆘 Help
 If you encounter any issue or would like to contribute to a specific problem without going through the process of creating a pull request, create an [issue](https://github.com/Perytron/UZH/issues) and we will aid you as soon as possible. For the non-GitHub users among you, write us directly in the WhatsApp chat "Informatik Jahrgang 22".
