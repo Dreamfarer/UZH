@@ -1,9 +1,12 @@
-#!/usr/bin/env python3
-
 from unittest import TestCase
 from combustion_car import CombustionCar
 from electric_car import ElectricCar
 from hybrid_car import HybridCar
+'''
+I still don't know I could get this working
+directly in the repo. Atm, just change run this test 
+within the respective solution folder.
+'''
 
 class TestCars(TestCase):
 
