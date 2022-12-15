@@ -1,10 +1,14 @@
+'''
+You can't run tests from here!
+(Don't know how to fix this yet, sowwy)
+'''
+
 from unittest import TestCase
 from combustion_car import CombustionCar
 from electric_car import ElectricCar
 from hybrid_car import HybridCar
 '''
-I still don't know I could get this working
-directly in the repo. Atm, just change run this test 
+Atm, just change run this test 
 within the respective solution folder.
 '''
 
