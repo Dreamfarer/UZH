@@ -1,0 +1,14 @@
+Pseudocode:
+
+
+largest = minimal int
+second =  minimal int
+  
+for i = 0 to end of array do
+	if A[i] > largest do
+      	second = largest
+            largest = A[i]
+      else if i > second
+              second = A[i]
+return or print second
+
