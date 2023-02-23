@@ -7,8 +7,9 @@ int main() {
     int largest_number = INT_MIN;
     int second_largest_number = INT_MIN;
     int A[] = {4, 3, 11, 133, 9, 8, 312};
+    int len_array = sizeof(A)/sizeof(A[0]);
 
-    for (int i = 0; i < sizeof(A)/sizeof(A[0]); i++ ) {
+    for (int i = 0; i < len_array; i++ ) {
     
         if (A[i] > largest_number){
             second_largest_number = largest_number;
