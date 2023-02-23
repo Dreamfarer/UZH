@@ -21,7 +21,7 @@ If this is your first time around, please stick around for the following explana
 > If you only want to do a one time contribution, consider helping via the forking method explained further down.
 
 ### Step 1: Create a new branch
-Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **EXERCISE-TASK-USERNAME-DESCRIPTION**. However, please use lowercase letters only, except for your username, and separate every task explicitly, e.g. **009-01-02-03-04-Perytron-solution** if you were to upload solution one to four of the 9th exercise set. Afterwards, tap the green button labeled "**Create branch**" to confirm.
+Head over to [here](https://github.com/Perytron/UZH/branches) and hit the green button labeled "**New branch**". Enter a new branch name with the following convention: **MODULE-EXERCISE-TASK-USERNAME-DESCRIPTION**. However, please use lowercase letters only, except for your username, and separate every task explicitly, e.g. **info1-009-01-02-03-04-Perytron-solution** if you were to upload solution one to four of the 9th exercise set. Afterwards, tap the green button labeled "**Create branch**" to confirm.
 
 ### Step 2: Clone the repository
 
