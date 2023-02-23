@@ -1,0 +1,19 @@
+Input: An array A[1..n] with n distinct integers, where n ≥ 2. 
+Output: the second largest integer in A
+
+largest_number = very small number
+second_number = very small number
+
+
+for i from A[0 until end]
+
+	if i > largest_number
+		second_number = largest_number
+		largest_number = i
+
+	else if i > second_number
+		second_number = i
+
+return second_number
+	
+		
