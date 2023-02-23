@@ -1,0 +1,12 @@
+Input: An array A[1..n] with n distinct integers, where n ≥ 2.
+Output: the second largest integer in A.
+
+a is 0
+b is 0
+for i is 1 to n
+    if A[i] smaller a
+        b is a
+        a is A[i]
+    else if A[i] smaller b
+        b is A[i]
+return b
