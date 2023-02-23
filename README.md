@@ -47,9 +47,9 @@ Chose whatever local directory you want the repository to be stored. Visual Stud
 
 </details>
 
-<details><summary>PyCharm</summary>
+<details><summary>PyCharm/CLion</summary>
 
-After launching PyCharm perform the following steps:
+After launching PyCharm/CLion perform the following steps:
 ```
 1. Tap on “Get from VCS” in the top right corner.
 2. Paste the following URL into the input field: “https://github.com/Perytron/UZH.git”
@@ -80,9 +80,9 @@ The following step is very important because if you do not perform it, you would
 Firstly, inside the **Source Control** tab, click onto the menu labeled "**...**" and choose "**Fetch**" to let Visual Studio Code discover your freshly created branch. Next off, again opening the menu labeled "**...**", choose "**Checkout to...**". The search bar will pop up; click onto the branch you have created in step one. It will appear in the form of "**origin/BRANCH_NAME**", in our example this would be: "**origin/009-1-Perytron-Fix**".
 
 </details>
-<details><summary>PyCharm</summary>
+<details><summary>PyCharm/CLion</summary>
 
-Inside your PyCharm you have to perform the following actions:
+Inside your PyCharm/CLion you have to perform the following actions:
 ```
 1. Open your cloned repository folder
 2. Tap on Git on the bottom left. A window should appear with branches to the left, commit history in the middle and commit details to the right.
@@ -122,9 +122,9 @@ Open the **Source Control** panel again like you have previously done in step tw
 If you are satisfied with your commit message, tap onto the downwards pointing arrow on the right-hand side of the button labeled "**Commit**". Chose "**Commit & Push**" to upload your changes to GitHub.
 
 </details>
-<details><summary>PyCharm</summary>
+<details><summary>PyCharm/CLion</summary>
 
-After you coded your solution inside PyCharm or manually copied your solution files to your local repository folder, PyCharm should automatically recognise your changes.
+After you coded your solution inside PyCharm/CLion or manually copied your solution files to your local repository folder, PyCharm/CLion should automatically recognise your changes.
 
 > Please follow the correct folder structure laid out in our guidelines on GitHub otherwise your PR might get rejected.
 
