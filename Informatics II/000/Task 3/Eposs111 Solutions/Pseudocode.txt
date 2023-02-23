@@ -11,3 +11,4 @@ for i = 0 to end of array do
       else if i > second
               second = A[i]
 return or print second
+
