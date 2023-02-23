@@ -1,0 +1,22 @@
+Input: An array A[1..n] with n distinct integers, where n ≥ 2. 
+Output: the second largest integer in A
+
+# maybe replace this part with two very small numbers for largest_number and second_number #
+if A[0] > A[1]
+	largest_number = A[0] and second_number = A[1]
+else 
+	largest_number = A[1] and second_number = A[0]
+#															 #
+
+for i from A[2 until end]
+
+	if i > largest_number
+		second_number = largest_number
+		largest_number = i
+
+	else if i > second_number
+		second_number = i
+
+return second_number
+	
+		
