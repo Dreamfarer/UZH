@@ -101,7 +101,7 @@ Now it is the time to implement all your changes. Please make sure that your cod
 > As for test cases: There is one file where every contributor adds their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file. Please append your test function names with your username or abbreviation, e.g. def test_invalid_input_PER.
 
 ### Step 5: Just send it (Commit & Push)
-> When writing your commit message, be sure to follow the convention of starting the sentence with a capital letter and writing in present tense, e.g. "**Add solution 010-4**".
+> When writing your commit message, follow a similar convention as in the naming of the branch by starting the sentence with a capital letter and writing in present tense**MODULE-EXERCISE-TASK: DESCRIPTION**, e.g **Info1-009-01: Add solution** 
 <details><summary>Git-SCM</summary>
 
 To track, stage and commit your changes, you will have to copy and paste the following commands into your git-enabled terminal of choice. Please change **COMMIT_MESSAGE** and **ADDITIONAL_DESCRIPTION** to something meaningful, e.g. **git commit -m "E10 T1 fix" -m "Fix typo in main function"**. Don't forget to include the quotation marks (").
