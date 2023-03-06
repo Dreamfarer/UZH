@@ -21,7 +21,6 @@ void drawTriangle(int A[], int n){
     drawTriangle(B, n-1);
 
     //print line of current level
-    
     for (i=0; i<n; i++){
             printf("%i ", A[i]);
     }
