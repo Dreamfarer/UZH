@@ -1,7 +1,7 @@
 #include <stdio.h>
 int dotP(int A[], int B[], int n)
 {
-    int res;
+    int res = 0;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
