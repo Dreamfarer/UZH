@@ -4,24 +4,17 @@ int dotP(int A[], int B[], int n)
     int res = 0;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            if (i == j)
-            {
-                res = res + B[j] * A[i];
-            }
-        }
+        res = res + B[i] * A[i];
     }
     return res;
 };
 
 int main(void)
 {
-
     // Input version for 2x2 Case
-    int M2[2][2];
-    int M1[2][2];
     int n = 2;
+    int M2[n][n];
+    int M1[n][n];
     printf("Type a number: ");
     scanf("%d", &M1[0][0]);
     printf("Type a number: ");
