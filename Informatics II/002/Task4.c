@@ -22,7 +22,7 @@ void drawTriangle(int A[], int n){
 
     //print line of current level
     for (i=0; i<n; i++){
-            printf("%i ", A[i]);
+        printf("%i ", A[i]);
     }
     printf("\n");
 }
