@@ -105,7 +105,7 @@ Now it is the time to implement all your changes. Please make sure that your cod
 > As for test cases: There is one file where every contributor adds their individual test cases, so that all are collected in one file. Just add yours at the bottom of the file. Please append your test function names with your username or abbreviation, e.g. def test_invalid_input_PER.
 
 ### Step 5: Just send it (Commit & Push)
-> When writing your commit message, follow a similar convention as in the naming of the branch by starting the sentence with a capital letter and writing in present tense**MODULE-EXERCISE-TASK: DESCRIPTION**, e.g **Info1-009-01: Add solution** 
+> When writing your commit message, follow a similar convention as in the naming of the branch by starting the sentence with a capital letter and writing in present tense **MODULE-EXERCISE-TASK: DESCRIPTION**, e.g **Info1-009-01: Add solution** 
 <details><summary>Git-SCM</summary>
 
 To track, stage and commit your changes, you will have to copy and paste the following commands into your git-enabled terminal of choice. Please change **COMMIT_MESSAGE** and **ADDITIONAL_DESCRIPTION** to something meaningful, e.g. **git commit -m "E10 T1 fix" -m "Fix typo in main function"**. Don't forget to include the quotation marks (").
@@ -150,7 +150,7 @@ If the push was successful you should see your commit on GitHub but remember loo
 </details>
 
 ### Step 6: Create a pull request (PR)
-Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the button labeled "**compare: main**". From the list, chose the branch you have just changed. Inside the pull request, add [Perytron (Gianluca)](https://github.com/Perytron) as a reviewer and yourself as an assignee. Please also tag your pull request (PR) with the appropriate labels. For example, if you were to upload solutions, chose the yellowish label called "**solution**". 
+Head over to [here](https://github.com/Perytron/UZH/compare/) and click on the button labeled "**compare: main**". From the list, chose the branch you have just changed. Name the pull request accordingly by starting the sentence with a capital letter and writing in present tense with the following convention: **MODULE-EXERCISE-TASK: DESCRIPTION**, e.g **Info1-002-04: Perytron solution** Inside the pull request, add [Perytron (Gianluca)](https://github.com/Perytron) as a reviewer and yourself as an assignee. Please also tag your pull request (PR) with the appropriate labels. For example, if you were to upload solutions, chose the yellowish label called "**solution**". 
 
 Your changes are now awaiting supervision, however, the code itself will not be tested. The only check involves oversighting that nothing gets unintentionally changed or deleted.
 
