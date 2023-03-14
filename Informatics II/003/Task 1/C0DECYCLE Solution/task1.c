@@ -12,7 +12,7 @@ int linear_search(int A[], int n, int t) {
 
 int binary_search(int A[], int n, int t) {
     int l = 0;
-    int r = n;
+    int r = n - 1;
     int m;
     while (l <= r) {
         m = l + (r - l) / 2;
