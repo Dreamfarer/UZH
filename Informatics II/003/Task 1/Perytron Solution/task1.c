@@ -7,10 +7,12 @@ int A[100000000];
 int linear_search(int A[], int n, int t) {
     for (int i = 0; i < n; i++) {
         if (A[i] == t) {
-            return i;
+            // return i;
+            return 1;
         }
     }
-    return -1;
+    // return -1;
+    return 0;
 }
 
 int binary_search(int A[], int l, int r, int t) {
@@ -19,12 +21,14 @@ int binary_search(int A[], int l, int r, int t) {
     cross-over the boundaries (because we add/subtract 1 to the middle) and
     the following condition turns true.*/
     if (l > r) {
-        return -1;
+        // return -1;
+        return 0;
     }
     else {
         int m = (l + r) / 2;
         if (A[m] == t) {
-            return m;
+            // return m;
+            return 1;
         }
         else if (t < A[m]) {
             // Adjust boundaries to [left, middle - 1]
