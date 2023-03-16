@@ -133,3 +133,13 @@ Tests/
 
 # User-defined exceptions
 *.exe
+*.bin 
+*.elf
+*.msi
+*.deb
+*.tar
+*.gz 
+*.sys 
+*.app 
+*.dmg 
+*.jar
