@@ -4,6 +4,9 @@
 int n, t;
 int A[100000000];
 
+/*The commented-out return statements would transform it into a real search
+function where the index of the found element is returned.*/
+
 int linear_search(int A[], int n, int t) {
     for (int i = 0; i < n; i++) {
         if (A[i] == t) {
@@ -24,20 +27,18 @@ int binary_search(int A[], int l, int r, int t) {
         // return -1;
         return 0;
     }
+    int m = (l + r) / 2;
+    if (A[m] == t) {
+        // return m;
+        return 1;
+    }
+    if (t < A[m]) {
+        // Adjust boundaries to [left, middle - 1]
+        return binary_search(A, l, m - 1, t);
+    }
     else {
-        int m = (l + r) / 2;
-        if (A[m] == t) {
-            // return m;
-            return 1;
-        }
-        else if (t < A[m]) {
-            // Adjust boundaries to [left, middle - 1]
-            return binary_search(A, l, m - 1, t);
-        }
-        else {
-            // Adjust boundaries to [middle + 1, right]
-            return binary_search(A, m + 1, r, t);
-        }
+        // Adjust boundaries to [middle + 1, right]
+        return binary_search(A, m + 1, r, t);
     }
 }
 
