@@ -22,7 +22,7 @@ int main(){
         }
     }
     printf("Second largest number: %d", second_max); 
-    }
+}
     
 
  
