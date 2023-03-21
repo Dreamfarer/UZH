@@ -35,8 +35,7 @@ int binary_search(int A[], int l, int r, int t) {
     if (t < A[m]) {
         // Adjust boundaries to [left, middle - 1]
         return binary_search(A, l, m - 1, t);
-    }
-    else {
+    } else {
         // Adjust boundaries to [middle + 1, right]
         return binary_search(A, m + 1, r, t);
     }
