@@ -25,6 +25,9 @@ int maxCombineSum(int A[], int l, int m, int r) {
 }
 
 int maxSubSum(int A[], int l, int r) {
+    if (l > r) {
+        return INT_MIN;
+    }
     if (l == r) {
         return A[r];
     }
