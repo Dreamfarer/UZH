@@ -26,8 +26,8 @@ int hoare_partition(int *a, int s, int e){
     int i = s;
     int j = e;
     while(i <j){
-        while(pivot<a[j]); j--;
-        while(pivot>a[i]); i++;
+        while(pivot<a[j]) j--;
+        while(pivot>a[i]) i++;
         swap(a,j,i);
     }
     return i;
