@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap(int *a,int i, int j){
+void swap(int *a, int i, int j){
     int temp = a[i];
     a[i] = a[j];
     a[j] = temp;
@@ -16,7 +16,7 @@ int lomuto_partition(int *a, int s, int e){
             index_pivot++;
         }
     }
-    swap(a,index_pivot,e);
+    swap(a, index_pivot,e);
     return index_pivot;
 }
 
@@ -28,7 +28,7 @@ int hoare_partition(int *a, int s, int e){
     while(i <j){
         while(pivot<a[j]) j--;
         while(pivot>a[i]) i++;
-        swap(a,j,i);
+        swap(a, j, i);
     }
     return i;
 }
@@ -42,7 +42,7 @@ void quick_sort(int *a,int s, int e){
     quick_sort(a, s, index - 1);
     quick_sort(a,index + 1, e);
 
-    }
+}
 
 int main(){
     int n = 10;
@@ -55,5 +55,5 @@ int main(){
         printf("%d ", arr[i]);
     }
     return 0;
-    }
+}
     
