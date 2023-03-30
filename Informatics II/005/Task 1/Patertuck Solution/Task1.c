@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void swap(int *A, int i, int j)
-{
+void swap(int *A, int i, int j){
     int temp = A[i];
     A[i] = A[j];
     A[j] = temp;
@@ -24,7 +23,6 @@ void max_heapify(int *A, int n, int i, int d){
         swap(A, max_index, i);
         max_heapify(A, n, max_index, d);
     }
-
 }
  
 
@@ -40,16 +38,14 @@ void printHeap(int A[], int n, int d) {
     for (int i = 0; i < n - 1; i++) {
         printf("  %d -- %d\n", A[i / d], A[i + 1]);
     }
-
     printf("}\n");
 }
 
 void heapSort(int *A, int n, int d) {
     buildMaxHeap(A, n, d);
+
     for (int i = n - 1; i >= 0; i--) {
-        int temp = A[i];
-        A[i] = A[0];
-        A[0] = temp;
+        swap(A, i, 0);
         max_heapify(A, i, 0, d);
     }
 }
