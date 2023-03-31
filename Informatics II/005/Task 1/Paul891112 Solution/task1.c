@@ -39,14 +39,6 @@ void heapify(int A[], int i, int s, int d){
     printHeap(A,s,d);
 }
 
-
-void buildMaxHeap(int A[], int n, int d);
-//A is the array to be converted, n
-//is the real size of the array A and d is the maximum number of child each node can have in the
-//heap.
-
-void heapSort(int A[], int n, int d); //sorts in ascending order
-
 void printArray(int A[], int n){//prints a given array to the console
 
     printf("Array: {");
