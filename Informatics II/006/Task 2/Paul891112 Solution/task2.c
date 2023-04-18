@@ -2,14 +2,6 @@
 #include<stdlib.h>
 #define N 5
 
-
-void print(int *arr, int n);
-
-int* reverse(int *arr, int n);
-
-int* prepend(int *arr, int v);
-
-
 void print(int *arr, int n){
     printf("%d", arr[0]);
     for(int i=1;i<n;i++){

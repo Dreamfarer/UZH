@@ -8,13 +8,6 @@ struct node {
     struct node* next;
 };
 
-
-struct node* convertArraytoLinkedList(int *arr, int n);
-
-void print(struct node* curr);
-
-struct node* reverseLinkedList(struct node* head);
-
 struct node* convertArraytoLinkedList(int *arr, int n){
 
     struct node* root = malloc(sizeof(struct node));
