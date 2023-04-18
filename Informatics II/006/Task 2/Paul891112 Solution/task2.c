@@ -31,8 +31,11 @@ int* reverse(int *arr, int n){
 
 
 int* prepend(int *arr, int v){
-    int* p = arr-1;
-    p[0] = v;
+    int* p = malloc((N+1)*sizeof(int));
+    *p = v;
+    for(int i=1;i<=N;i++){
+        *(p+i) = *(arr+i);
+    }
     return p;
 }
 
